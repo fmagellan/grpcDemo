@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "github.com/fmagellan/grpcDemo/demo1";
+
+package demo1;
+
+service Greeter {
+    rpc GetName (PersonName) returns (PersonDetails) {}
+}
+
+message PersonName {
+    string name = 1;
+}
+
+message PersonDetails {
+    string name = 1;
+    int32 age = 2;
+    int32 year = 3;
+}
